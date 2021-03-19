@@ -1,9 +1,12 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "a92ce8f0-8b56-489f-8660-0eee1974df45"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "AngularTableData": {
+    "TableData": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/AngularTableData",
+            "outputPath": "dist/TableData",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -65,18 +68,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "AngularTableData:build"
+            "browserTarget": "TableData:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "AngularTableData:build:production"
+              "browserTarget": "TableData:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "AngularTableData:build"
+            "browserTarget": "TableData:build"
           }
         },
         "test": {
@@ -113,16 +116,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "AngularTableData:serve"
+            "devServerTarget": "TableData:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "AngularTableData:serve:production"
+              "devServerTarget": "TableData:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "AngularTableData"
+  "defaultProject": "TableData"
 }
